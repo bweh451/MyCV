@@ -3,10 +3,10 @@
 ## Table of Contents
 | Sections | Links | 
 | ------------- |:-------------:|
-| Description | [Click Me](##description) |
-| Installation | [Click Me](##installation) |   
-| Usage | [Click Me](##usage) |
-| Additional authors | [Click Me](##additional-authors) |
+| Description | [Click Me](## description) |
+| Installation | [Click Me](## installation) |   
+| Usage | [Click Me](## usage) |
+| Additional authors | [Click Me](## additional-authors) |
 
 ## Desciption
 This project is a website that I made that acts as my CV. I only used HTML and SCSS for this. There's nothing crazy, it's just a simple website that you can read through. I used CSS grid for the layout of the webpage and used google fonts for the fonts. I also used bootstrap icons for all the icons that acts as the bullets for the lists. I had a lot of fun with that.
