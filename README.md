@@ -16,6 +16,9 @@ The installation is simple, all you have to do is to download all the files and 
 
 ## Usage:
 As stated before, this is just a simple website for my CV. Just scroll throug and have a read! I had did use media queries in CSS to make the website fully responsive so you can enjoy it on any screen !
+![Big Screen](big.png)
+![Smaller Screen](small.png)
+![Mobile Screen](mobile.png)
 
 ## Additional authors:
 None.
