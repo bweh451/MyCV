@@ -1,0 +1,329 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#gridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+      grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+      grid-template-areas: "photoContainer header header"  "photoContainer thisIsMeHead thisIsMeHead" "photoContainer thisIsMe thisIsMe" "mySkillsHead eduHead expHead" "mySkills edu exp" "contactMeHead edu exp" "contactMe edu exp";
+}
+
+#photoContainer {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: photoContainer;
+  width: 100%;
+  height: 100%;
+}
+
+#photoContainer img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#photoContainer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  background-color: #1c4046;
+  color: #eae2cc;
+  font-family: 'Frank Ruhl Libre', serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#header h1 {
+  font-size: 400%;
+  margin: 0px;
+  font-weight: 300;
+}
+
+#header h2 {
+  font-size: 200%;
+  margin: 0px;
+  font-weight: 300;
+  text-transform: none;
+}
+
+#thisIsMeHead {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: thisIsMeHead;
+  background-color: #b66d38;
+  color: #eae2cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#thisIsMeHead h2 {
+  font-weight: 300;
+}
+
+#thisIsMe {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: thisIsMe;
+  background-color: #eae2cc;
+  padding: 0px 20px 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mySkillsHead {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: mySkillsHead;
+  background-color: #1c4046;
+  color: #eae2cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mySkillsHead h2 {
+  font-weight: 300;
+}
+
+#mySkills {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: mySkills;
+  background-color: #eae2cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mySkills #tools {
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+}
+
+#mySkills #languages {
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+}
+
+#eduHead {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: eduHead;
+  background-color: #336b6f;
+  color: #eae2ccc6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#eduHead h2 {
+  font-weight: 300;
+}
+
+#edu {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: edu;
+  background-color: #eae2ccc6;
+  padding: 0px 20px 0px 20px;
+}
+
+#edu #highS {
+  margin-top: 100px;
+}
+
+#highSchool {
+  margin-top: 20px;
+}
+
+#expHead {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: expHead;
+  background-color: #1c4046;
+  color: #eae2cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#expHead h2 {
+  font-weight: 300;
+}
+
+#exp {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: exp;
+  background-color: #eae2cc;
+  padding: 0px 20px 0px 20px;
+}
+
+#exp #generalAssist {
+  margin-top: 100px;
+}
+
+#contactMeHead {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: contactMeHead;
+  background-color: #b66d38;
+  color: #eae2cc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contactMeHead h2 {
+  font-weight: 300;
+}
+
+#contactMe {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: contactMe;
+  background-color: #1c4046;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contactMe li {
+  margin-bottom: 15px;
+  font-size: 120%;
+  color: #eae2cc;
+}
+
+i {
+  margin-right: 10px;
+}
+
+p, li {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #b66d38b8;
+  font-size: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: #eae2cc;
+}
+
+h3, h4, h5 {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #b66d38b8;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  text-transform: lowercase;
+  font-size: 200%;
+}
+
+@media only screen and (max-width: 769px) {
+  #gridContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+        grid-template-areas: "header" "photoContainer" "photoContainer" "thisIsMeHead" "thisIsMe" "mySkillsHead" "mySkills" "eduHead" "edu" "expHead" "exp" "contactMeHead" "contactMe";
+  }
+}
+
+@media only screen and (min-width: 770px) and (max-width: 1200px) {
+  #gridContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        grid-template-areas: "header header" "photoContainer photoContainer" "thisIsMeHead thisIsMeHead" "thisIsMe thisIsMe" "mySkillsHead eduHead" "mySkills edu" "expHead contactMeHead" "exp contactMe";
+  }
+}
+/*# sourceMappingURL=styles.css.map */

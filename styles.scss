@@ -1,0 +1,239 @@
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin:0px;
+    padding: 0px;
+}
+
+#gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+    grid-template-areas:
+    "photoContainer header header" 
+    "photoContainer thisIsMeHead thisIsMeHead"
+    "photoContainer thisIsMe thisIsMe"
+    "mySkillsHead eduHead expHead"
+    "mySkills edu exp"
+    "contactMeHead edu exp"
+    "contactMe edu exp";
+}
+
+#photoContainer{
+    grid-area: photoContainer;
+    width: 100%;
+    height: 100%;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+#header{
+    grid-area: header;
+    background-color: #1c4046;
+    color: #eae2cc;
+    font-family: 'Frank Ruhl Libre', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-size: 400%;
+        margin:0px;
+        font-weight: 300;
+    }
+    h2{
+        font-size: 200%;
+        margin: 0px;
+        font-weight: 300;
+        text-transform: none;
+    }
+}
+
+#thisIsMeHead{
+    grid-area: thisIsMeHead;
+    background-color: #b66d38;
+    color: #eae2cc;
+    @include flexCenter(); 
+    h2{
+        font-weight: 300;
+    }
+}
+
+
+#thisIsMe{
+    grid-area: thisIsMe;
+    background-color: #eae2cc;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mySkillsHead{
+    grid-area: mySkillsHead;
+    background-color: #1c4046;
+    color: #eae2cc;
+    @include flexCenter();
+    h2{
+        font-weight: 300;
+    }
+}
+
+#mySkills{
+    grid-area: mySkills;
+    background-color: #eae2cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #tools{
+        margin: 10px 0px 10px 0px;
+        font-weight: bold;
+    }
+
+    #languages{
+        margin: 10px 0px 10px 0px;
+        font-weight: bold;
+    }
+}
+
+#eduHead{
+    grid-area: eduHead;
+    background-color: #336b6f;
+    color: #eae2ccc6;
+    @include flexCenter();
+    h2{
+        font-weight: 300;
+    }
+}
+
+#edu{
+    grid-area: edu;
+    background-color:#eae2ccc6;
+    padding: 0px 20px 0px 20px;
+    #highS{
+        margin-top: 100px;
+    }
+}
+
+#highSchool{
+    margin-top: 20px;
+}
+
+#expHead{
+    grid-area: expHead;
+    background-color: #1c4046;
+    color: #eae2cc;
+    @include flexCenter();
+    h2{
+        font-weight: 300;
+    } 
+}
+
+#exp{
+    grid-area: exp;
+    background-color: #eae2cc;
+    padding: 0px 20px 0px 20px;
+    #generalAssist{
+        margin-top: 100px;
+    }
+}
+
+#contactMeHead{
+    grid-area: contactMeHead;
+    background-color: #b66d38;
+    color: #eae2cc;
+    @include flexCenter();
+    h2{
+        font-weight: 300;
+    }
+}
+
+#contactMe{
+    grid-area: contactMe;
+    background-color: #1c4046;
+    @include flexCenter();
+    li{
+        margin-bottom: 15px;
+        font-size: 120%;
+        color: #eae2cc;
+    }
+}
+
+i{
+    margin-right: 10px;
+}
+
+p, li{
+    font-family: 'Didact Gothic', sans-serif;
+    color: #b66d38b8;
+    font-size: 120%;
+}
+
+a{
+    text-decoration: none;
+    color: #eae2cc
+}
+
+h3, h4 ,h5{
+    font-family: 'Didact Gothic', sans-serif;
+    color: #b66d38b8;
+}
+
+li{
+    list-style: none;
+}
+
+h2{
+    text-transform: lowercase;
+    font-size: 200%;
+}
+
+@media only screen and (max-width:769px) {
+    #gridContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 1fr 0.1fr 1fr 0.1fr 0.5fr;
+        grid-template-areas:
+        "header"
+        "photoContainer"
+        "photoContainer"
+        "thisIsMeHead"
+        "thisIsMe"
+        "mySkillsHead"
+        "mySkills"
+        "eduHead"
+        "edu"
+        "expHead"
+        "exp"
+        "contactMeHead"
+        "contactMe";
+    }
+}
+
+@media only screen and (min-width: 770px) and (max-width:1200px) {
+    #gridContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr 0.1fr 0.5fr;
+        grid-template-areas:
+        "header header"
+        "photoContainer photoContainer"
+        "thisIsMeHead thisIsMeHead"
+        "thisIsMe thisIsMe"
+        "mySkillsHead eduHead"
+        "mySkills edu"
+        "expHead contactMeHead"
+        "exp contactMe";
+    }
+}
