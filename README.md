@@ -15,7 +15,7 @@ This project is a website that I made that acts as my CV. I only used HTML and S
 The installation is simple, all you have to do is to download all the files and open the index.html file in your web brower (you can do this by draging and dropping the file into one of your web browser's windows) read and enjoy.
 
 ## Usage
-As stated before, this is just a simple website for my CV. Just scroll throug and have a read! I had did use media queries in CSS to make the website fully responsive so you can enjoy it on any screen !
+As stated before, this is just a simple website for my CV. Just scroll through and have a read! I had did use media queries in CSS to make the website fully responsive so you can enjoy it on any screen !
 ![Big Screen](/README_src/big.png)
 ![Smaller Screen](/README_src/small.png)
 ![Mobile Screen](/README_src/mobile.png)
